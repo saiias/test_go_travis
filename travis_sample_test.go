@@ -12,6 +12,14 @@ func TestAddSuccess(t *testing.T) {
 	}
 }
 
+func TestAddZeroSuccess(t *testing.T) {
+	const a,b = 0,0
+	const ret = 0
+	if x:=Add(a,b); x != ret {
+		t.Errorf("Add(%v,%v) = %v, want %v",a,b,x,ret)
+	}
+}
+
 func TestAddFail(t *testing.T) {
 	const a,b = 1,1
 	const ret = 3
